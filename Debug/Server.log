@@ -1,0 +1,19 @@
+﻿生成启动时间为 2015/9/20 0:21:16。
+     1>项目“D:\Workstations\Server\Server\Server.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\soft\VS2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Server.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MySqlOperate.cpp
+         MySqlOperate.cpp
+       Link:
+         D:\soft\VS2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Workstations\Server\Debug\Server.exe" /INCREMENTAL /NOLOGO /LIBPATH:D:\soft\mysql\lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:D:\soft\VS2013\VC\Include\Manifest\dpiaware.manifest /DEBUG /PDB:"D:\Workstations\Server\Debug\Server.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Workstations\Server\Debug\Server.lib" /MACHINE:X86 Debug\Server.res
+         Debug\MySqlOperate.obj
+         Debug\Server.obj
+         Debug\ServerDlg.obj
+         Debug\stdafx.obj
+     1>MySqlOperate.obj : error LNK2019: 无法解析的外部符号 _mysql_init@4，该符号在函数 "public: bool __thiscall CMySqlOperate::ConnectMysql(char *,int,char *,char *,char *,char *,class ATL::CStringT<wchar_t,class StrTraitMFC_DLL<wchar_t,class ATL::ChTraitsCRT<wchar_t> > >)" (?ConnectMysql@CMySqlOperate@@QAE_NPADH0000V?$CStringT@_WV?$StrTraitMFC_DLL@_WV?$ChTraitsCRT@_W@ATL@@@@@ATL@@@Z) 中被引用
+     1>MySqlOperate.obj : error LNK2019: 无法解析的外部符号 _mysql_real_connect@32，该符号在函数 "public: bool __thiscall CMySqlOperate::ConnectMysql(char *,int,char *,char *,char *,char *,class ATL::CStringT<wchar_t,class StrTraitMFC_DLL<wchar_t,class ATL::ChTraitsCRT<wchar_t> > >)" (?ConnectMysql@CMySqlOperate@@QAE_NPADH0000V?$CStringT@_WV?$StrTraitMFC_DLL@_WV?$ChTraitsCRT@_W@ATL@@@@@ATL@@@Z) 中被引用
+     1>D:\Workstations\Server\Debug\Server.exe : fatal error LNK1120: 2 个无法解析的外部命令
+     1>已完成生成项目“D:\Workstations\Server\Server\Server.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:09.35
