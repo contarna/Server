@@ -231,9 +231,12 @@ void CServerDlg::OnBnClickedOk()
 		g_sysUseInfo.str_UserName = GetSubString(str_return, 1, ",");
 		g_sysUseInfo.str_UserSex = GetSubString(str_return, 4, ",");
 
+		//just for test 
+		/*
 		::AfxMessageBox(str_return);
 		::AfxMessageBox(g_sysUseInfo.str_UserName);
 		::AfxMessageBox(g_sysUseInfo.str_UserSex);
+		*/
 
 		CDialogEx::OnOK();
 		CDlgMain  dlgMain;

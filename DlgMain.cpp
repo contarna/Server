@@ -57,7 +57,7 @@ BOOL CDlgMain::OnInitDialog()
 	// TODO:  在此添加额外的初始化
 	//设定字体
 	CFont m_font;
-	m_font.CreatePointFont(200, _T("华文彩云"));
+	m_font.CreatePointFont(150, _T("华文彩云"));
 	((CStatic*)GetDlgItem(IDC_STATIC_UserName))->SetFont(&m_font);
 	m_strUserName = g_sysUseInfo.str_UserName;
 	m_font.Detach();
@@ -87,6 +87,8 @@ void CDlgMain::OnDropFiles(HDROP hDropInfo)
 		//加入对文件格式的筛选，同时文件存入数据表，以便程序再次运行时重新显示列表
 		//此处写入数据库，应当包含文件名、文件存储路径、文件格式
 		str_Filename = RecordFile(str_Filename);
+
+
 		m_ListIndex.AddString(str_Filename);
 	}
 	DragFinish(hDropInfo);  //拖放结束后,释放内存
@@ -117,6 +119,11 @@ CString CDlgMain::RecordFile(CString FilePath)
 /************************************************************************/
 int CDlgMain::MatchFileExten(CString FileName)
 {
+	CString str_ExFormat;
+
+	int n = FileName.ReverseFind('.');
+	str_ExFormat = FileName.Right(FileName.GetLength() - n - 1);
+
 
 	return File_Err;
 }

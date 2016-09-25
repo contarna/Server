@@ -106,7 +106,7 @@ bool CDlgRegesiter::CheckValue()
 	return true;
 }
 
-
+/*根据注册用户名查询数据库中对应uid,若返回非零，代表已存在同名用户*/
 // 检查注册名称是否存在
 bool CDlgRegesiter::CheckIsExist(CString RegUserName)
 {
@@ -171,6 +171,7 @@ HBRUSH CDlgRegesiter::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)
 		case  IDC_EDIT_RegName:
 			if (m_bUserExist)
 			{
+				//用户名已存在，更改编辑框颜色
 				pDC->SetTextColor(RGB(255, 0, 0));
 				pDC->SetBkColor(RGB(220, 220, 220));
 				pDC->SetBkMode(TRANSPARENT);
@@ -192,6 +193,7 @@ BOOL CDlgRegesiter::OnInitDialog()
 	CDialogEx::OnInitDialog();
 
 	// TODO:  在此添加额外的初始化
+	//创建灰色画刷
 	m_Greybrush.CreateSolidBrush(RGB(200,200,200));
 
 	return TRUE;  // return TRUE unless you set the focus to a control
